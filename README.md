@@ -1,2 +1,2 @@
 # My-Project
-A simple website with light/dark mode
+A list of simple projects using HTML, CSS and javaScript

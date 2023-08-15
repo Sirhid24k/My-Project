@@ -42,7 +42,6 @@ li:hover {
 }
 ul {
   flex-grow: 1;
-  /* margin-left: 45rem; */
 }
 .lorem {
   display: flex;
