@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(
+    to top right,
+    rgba(100, 255, 100, 0.8),
+    rgb(255, 255, 255),
+    rgba(100, 100, 255, 0.8)
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background: rgba(0, 0, 0, 0.2);
+  min-height: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block input {
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  height: 25px;
+}
+.block input:focus {
+  outline: none;
+}
+.options {
+  margin: 5px;
+}
+.container section,
+.container button {
+  margin: 5px;
+}
+button {
+  background-color: white;
+  color: black;
+  border: 1.5px solid rgb(0, 0, 0);
+  border-radius: 5px;
+
+  transition: all 0.4s;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+header {
+  padding-right: 95px;
+}
+.hidden {
+  display: none;
+}
+select {
+  padding: 2px 5px;
+  cursor: pointer;
+}
