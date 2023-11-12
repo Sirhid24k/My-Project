@@ -42,6 +42,7 @@ li:hover {
 }
 ul {
   flex-grow: 1;
+  /* margin-left: 45rem; */
 }
 .lorem {
   display: flex;
@@ -52,12 +53,13 @@ ul {
 
   transition: all 0.3s;
 }
-.lorem2 {
+.lorem2,
+.lorem4 {
   background-color: #fff;
 
   transition: all 0.3s;
 }
-button {
+.btn {
   position: absolute;
   left: 0.3rem;
   top: 0.3rem;
@@ -65,11 +67,9 @@ button {
   background-color: #eee;
   border: none;
   border-radius: 0.5rem;
+  cursor: pointer;
 
   transition: all 0.3s;
-}
-button:hover {
-  cursor: pointer;
 }
 
 /* Dark Mode */
