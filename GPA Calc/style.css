@@ -16,7 +16,8 @@ body {
 }
 .container {
   background: rgba(0, 0, 0, 0.2);
-  min-height: 300px;
+  min-width: 20rem;
+  min-height: 30rem;
   padding: 15px;
   border-radius: 10px;
   border: 3px solid rgba(0, 0, 0, 0.8);
@@ -27,7 +28,8 @@ body {
 .block input {
   border-radius: 5px;
   border: 2px solid rgba(0, 0, 0, 0.5);
-  height: 25px;
+  font-size: 1rem;
+  padding: 0.25rem 0.325rem;
 }
 .block input:focus {
   outline: none;
@@ -39,28 +41,31 @@ body {
 .container button {
   margin: 5px;
 }
-button {
+.gpa-title,
+.message {
+  font-weight: 400;
+}
+.btn {
   background-color: white;
   color: black;
-  border: 1.5px solid rgb(0, 0, 0);
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 
-  transition: all 0.4s;
+  transition: all 0.4s linear;
 }
-button:hover {
+.btn:hover {
   background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-}
-header {
-  padding-right: 95px;
 }
 .hidden {
   display: none;
 }
 select {
-  padding: 2px 5px;
+  padding: 5px;
   cursor: pointer;
+  text-align: center;
 }

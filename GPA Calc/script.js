@@ -1,13 +1,14 @@
 'use strict';
-const btn = document.querySelector('.calc-btn');
+const calcBtn = document.querySelector('.calc-btn');
 const addedSection = document.querySelector('.added-section');
 const addButton = document.querySelector('.addButton');
+const header = document.querySelector('header');
 
 let gpa = 0;
 let sumOfUnits = 0;
 let finalGpa = 0;
 
-btn.addEventListener('click', () => {
+calcBtn.addEventListener('click', () => {
   const input = document.querySelectorAll('.unit-points');
   const option = document.querySelectorAll('select');
   const result = document.querySelector('.result');
@@ -30,7 +31,7 @@ btn.addEventListener('click', () => {
 });
 
 addButton.addEventListener('click', () => {
-  document.querySelector('header').classList.remove('hidden');
+  header.classList.remove('hidden');
   const section = document.createElement('section');
   section.classList.add('block');
 
