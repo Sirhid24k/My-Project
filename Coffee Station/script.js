@@ -5,6 +5,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 const headerLinks = document.querySelectorAll('.header-link');
 const headerTab = document.querySelector('.header-tab');
 const date = document.querySelector('.date');
+const pageNavs = document.querySelectorAll('.page-nav');
 
 // Get Date
 date.textContent = new Date().getFullYear();
@@ -54,5 +55,14 @@ navLinks.forEach(navLink => {
     const scrollEl = document.querySelector(clicked);
     scrollEl.scrollIntoView({ behavior: 'smooth' });
     nav.classList.remove('hidden');
+  });
+});
+
+pageNavs.forEach(pageBtn => {
+  pageBtn.addEventListener('click', e => {
+    e.preventDefault();
+    const clicked = e.target.getAttribute('href');
+    const scrollEl = document.querySelector(clicked);
+    scrollEl.scrollIntoView({ behavior: 'smooth' });
   });
 });
