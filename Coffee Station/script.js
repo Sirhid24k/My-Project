@@ -47,11 +47,12 @@ window.addEventListener('scroll', () => {
   scrollPosition = currentScroll;
 });
 
-navLinks.forEach(nav => {
-  nav.addEventListener('click', e => {
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', e => {
     e.preventDefault();
     const clicked = e.target.getAttribute('href');
     const scrollEl = document.querySelector(clicked);
     scrollEl.scrollIntoView({ behavior: 'smooth' });
+    nav.classList.remove('hidden');
   });
 });
