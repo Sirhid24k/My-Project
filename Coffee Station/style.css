@@ -326,6 +326,11 @@ About Section
     width: 40%;
   }
 }
+@media screen and (max-width: 1024px) {
+  .img {
+    filter: blur(0);
+  }
+}
 /* ////////////////////////////////////////////////////////
 Products Section
 */
