@@ -26,17 +26,7 @@ const showHeadertab = () => {
   headerTab.style.transform = 'translateY(0)';
 };
 
-// Smoothscrolling
-headerLinks.forEach(head => {
-  head.addEventListener('click', e => {
-    e.preventDefault();
-    const clicked = e.target.getAttribute('href');
-    const scrollEl = document.querySelector(clicked);
-    scrollEl.scrollIntoView({ behavior: 'smooth' });
-    hideHeadertab();
-  });
-});
-
+// Show/Hide Header-tab Logic
 let scrollPosition = window.scrollY;
 window.addEventListener('scroll', () => {
   const currentScroll = window.scrollY;
@@ -48,21 +38,31 @@ window.addEventListener('scroll', () => {
   scrollPosition = currentScroll;
 });
 
+// Smoothscrolling
+
+const smoothScroll = e => {
+  e.preventDefault();
+  const clicked = e.target.getAttribute('href');
+  const scrollEl = document.querySelector(clicked);
+  scrollEl.scrollIntoView({ behavior: 'smooth' });
+};
+
+headerLinks.forEach(head => {
+  head.addEventListener('click', e => {
+    smoothScroll(e);
+    hideHeadertab();
+  });
+});
+
 navLinks.forEach(navLink => {
   navLink.addEventListener('click', e => {
-    e.preventDefault();
-    const clicked = e.target.getAttribute('href');
-    const scrollEl = document.querySelector(clicked);
-    scrollEl.scrollIntoView({ behavior: 'smooth' });
+    smoothScroll(e);
     nav.classList.remove('hidden');
   });
 });
 
 pageNavs.forEach(pageBtn => {
   pageBtn.addEventListener('click', e => {
-    e.preventDefault();
-    const clicked = e.target.getAttribute('href');
-    const scrollEl = document.querySelector(clicked);
-    scrollEl.scrollIntoView({ behavior: 'smooth' });
+    smoothScroll(e);
   });
 });
