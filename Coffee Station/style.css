@@ -218,7 +218,7 @@ Header
     var(--clr-primary)
   );
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .header-link a {
     padding: 0 0.25rem;
     font-size: 0.9rem;
