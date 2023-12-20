@@ -223,6 +223,9 @@ Header
     padding: 0 0.25rem;
     font-size: 0.9rem;
   }
+  .header-links {
+    display: none;
+  }
 }
 /* ////////////////////////////////////////////////////////
 Skills Section
