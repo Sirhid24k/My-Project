@@ -5,6 +5,7 @@ const playerScoreBoard = document.querySelector('.player-score');
 
 let computerScore = 0;
 let playerScore = 0;
+let computer, player;
 
 button.addEventListener('click', playGame);
 
@@ -23,10 +24,10 @@ function playGame(e) {
   e.preventDefault();
   const inputText = document.querySelector('.input-text');
 
-  const player = inputText.value;
+  player = inputText.value;
   const randomNum = Math.floor(Math.random() * 3);
   const options = ['rock', 'scissors', 'paper'];
-  const computer = options[randomNum];
+  computer = options[randomNum];
 
   // resetting adjacentHTML
   result.innerHTML = '';
