@@ -10,15 +10,14 @@ let computer, player;
 button.addEventListener('click', playGame);
 
 // Functions
-function computerWins() {
-  return `<div>Computer: ${computer}, Player: ${player}<br>Computer Wins!!! 🎉🎉</div>`;
-}
-function playerWins() {
-  return `<div>Computer: ${computer}, Player: ${player}<br>Player Wins!!! 🎉🎉</div>`;
-}
-function draw() {
-  return `<div>Computer: ${computer}, Player: ${player}<br>Its a draw</div>`;
-}
+const computerWins = () =>
+  `<div>Computer: ${computer}, Player: ${player}<br>Computer Wins!!! 🎉🎉</div>`;
+
+const playerWins = () =>
+  `<div>Computer: ${computer}, Player: ${player}<br>Player Wins!!! 🎉🎉</div>`;
+
+const draw = () =>
+  `<div>Computer: ${computer}, Player: ${player}<br>Its a draw</div>`;
 
 function playGame(e) {
   e.preventDefault();
