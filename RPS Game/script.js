@@ -1,20 +1,23 @@
-// const game = confirm('Would u like to play a game of Rock, Paper, Scissors');
-
 const button = document.querySelector('.btn');
 const result = document.querySelector('.result');
 const computerScoreBoard = document.querySelector('.computer-score');
 const playerScoreBoard = document.querySelector('.player-score');
 
-let computerScore, playerScore;
-computerScore = playerScore = 0;
+let computerScore = 0;
+let playerScore = 0;
 
 button.addEventListener('click', playGame);
 
-// Refactoring
-// function resultComment(comment) {
-//   return `<div>Computer: Player:<br>${comment}</div>`;
-// }
-// result.insertAdjacentHTML('beforeend', concave('Computer Wins!!! 🎉🎉'));
+// Functions
+function computerWins() {
+  return `<div>Computer: ${computer}, Player: ${player}<br>Computer Wins!!! 🎉🎉</div>`;
+}
+function playerWins() {
+  return `<div>Computer: ${computer}, Player: ${player}<br>Player Wins!!! 🎉🎉</div>`;
+}
+function draw() {
+  return `<div>Computer: ${computer}, Player: ${player}<br>Its a draw</div>`;
+}
 
 function playGame(e) {
   e.preventDefault();
@@ -30,69 +33,48 @@ function playGame(e) {
 
   // Conditions
   if (computer === 'paper' && player === 'rock') {
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Computer Wins!!! 🎉🎉</div>`
-    );
+    result.insertAdjacentHTML('beforeend', computerWins());
     computerScore++;
     computerScoreBoard.textContent = computerScore;
   }
+
   if (computer === 'paper' && player === 'paper')
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Its a draw</div>`
-    );
+    result.insertAdjacentHTML('beforeend', draw());
+
   if (computer === 'paper' && player === 'scissors') {
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Player Wins!!! 🎉🎉</div>`
-    );
+    result.insertAdjacentHTML('beforeend', playerWins());
     playerScore++;
     playerScoreBoard.textContent = playerScore;
   }
 
   ///////////////////////////////////////////////////////////
   if (computer === 'rock' && player === 'scissors') {
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Computer Wins!!! 🎉🎉</div>`
-    );
+    result.insertAdjacentHTML('beforeend', computerWins());
     computerScore++;
     computerScoreBoard.textContent = computerScore;
   }
+
   if (computer === 'rock' && player === 'rock')
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Its a draw</div>`
-    );
+    result.insertAdjacentHTML('beforeend', draw());
+
   if (computer === 'rock' && player === 'paper') {
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Player Wins!!! 🎉🎉</div>`
-    );
+    result.insertAdjacentHTML('beforeend', playerWins());
     playerScore++;
     playerScoreBoard.textContent = playerScore;
   }
 
   ///////////////////////////////////////////////////////////
   if (computer === 'scissors' && player === 'paper') {
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Computer Wins!!! 🎉🎉</div>`
-    );
+    result.insertAdjacentHTML('beforeend', computerWins());
     computerScore++;
     computerScoreBoard.textContent = computerScore;
   }
+
   if (computer === 'scissors' && player === 'scissors')
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Its a draw</div>`
-    );
+    result.insertAdjacentHTML('beforeend', draw());
+
   if (computer === 'scissors' && player === 'rock') {
-    result.insertAdjacentHTML(
-      'beforeend',
-      `<div>Computer: ${computer}, Player: ${player}<br>Player Wins!!! 🎉🎉</div>`
-    );
+    result.insertAdjacentHTML('beforeend', computerWins());
     playerScore++;
     playerScoreBoard.textContent = playerScore;
   }
