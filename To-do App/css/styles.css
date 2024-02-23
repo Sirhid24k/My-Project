@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel');
+/*
+////////////////////////////////////////////////////////////
+Variables
+*/
+:root {
+  --clr-primary: #0f74e9;
+  --clr-primary-light: #8ce2ed;
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --ff-primary: 'Catamaran', sans-serif;
+  --ff-secondary: 'Grand Hotel', cursive;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+}
+/*
+////////////////////////////////////////////////////////////
+Global styles
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/* more global styles */
+.btn {
+  text-transform: capitalize;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 400;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.btn:hover {
+  color: var(--clr-primary);
+  background: var(--clr-primary-light);
+}
+/*
+/////////////////////////////////////////////////////////////
+styling
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--clr-grey-5);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  min-height: 80vh;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.form-control {
+  font-size: 1rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: var(--radius);
+}
+input {
+  text-transform: capitalize;
+  border: none;
+}
+input::placeholder {
+  text-transform: lowercase;
+  opacity: 0.7;
+}
+input:focus {
+  outline: none;
+}
+.form-btn {
+  background: var(--clr-primary-light);
+  border: none;
+  cursor: pointer;
+  color: var(--clr-grey-1);
+  transition: var(--transition);
+}
+.form-btn:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+.to-do-list {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  background: var(--clr-grey-10);
+  border-radius: var(--radius);
+}
+.to-do-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 18rem;
+  padding: 0.375rem 0.375rem;
+  background: var(--clr-primary);
+  color: var(--clr-grey-10);
+  border-radius: var(--radius);
+  margin: 0.5rem 0.25rem;
+  transition: all 1s linear;
+}
+.to-do-item h4 {
+  margin-bottom: 0;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  transition: all 1s linear;
+}
+.list-icon {
+  padding: 0.125rem 0.25rem;
+  cursor: pointer;
+  margin: 0 0.125rem;
+}
+.toggle {
+  text-decoration: line-through;
+  opacity: 0.5;
+  background: black;
+  filter: blur(1px);
+}
+.delete {
+  transform: rotate(45deg);
+  opacity: 0;
+}
