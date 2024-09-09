@@ -16,6 +16,10 @@ let voteCountArray = [
     votes: 0,
   },
   {
+    candidateName: 'ezugwu',
+    votes: 0,
+  },
+  {
     candidateName: 'abubakar',
     votes: 0,
   },
@@ -45,6 +49,10 @@ let voteCountArray = [
   },
   {
     candidateName: 'siraj',
+    votes: 0,
+  },
+  {
+    candidateName: 'gracious',
     votes: 0,
   },
   {
