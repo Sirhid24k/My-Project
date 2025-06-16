@@ -2,6 +2,9 @@
 const formInput = document.querySelector('.form-input');
 const formBtn = document.querySelector('.form-btn');
 const toDoContainer = document.querySelector('.to-do-list');
+const loader = document.querySelector('.loader');
+let checkedTodos = 0;
+loader.value = 0;
 
 // Load todos from local storage when the page loads/re-loads
 loadTodosFromLocalStorage();
@@ -43,12 +46,11 @@ function addTodoToDOM(inputValue) {
 // EventListeners
 formBtn.addEventListener('click', e => {
   e.preventDefault();
-  if (formInput.value !== '') {
-    const inputValue = formInput.value;
-    addTodoToDOM(inputValue);
-    saveTodosToLocalStorage();
-    formInput.value = '';
-  }
+  if (!formInput.value) return;
+  const inputValue = formInput.value;
+  addTodoToDOM(inputValue);
+  saveTodosToLocalStorage();
+  formInput.value = '';
 });
 
 toDoContainer.addEventListener('click', e => {
@@ -58,6 +60,12 @@ toDoContainer.addEventListener('click', e => {
   ) {
     e.target.closest('.to-do-item').classList.toggle('toggle');
     saveTodosToLocalStorage();
+    checkedTodos++;
+    let progress = 0;
+    progress =
+      (checkedTodos / toDoContainer.querySelectorAll('.to-do-item').length) *
+      100;
+    loader.value = progress;
   }
   if (
     e.target.classList.contains('delete-icon') ||
